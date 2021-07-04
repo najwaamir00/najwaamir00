@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #f2f2f2;
+}
+nav{
+    background: #da9d49;
+    margin-bottom: -12px;
+}
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+nav .logo{
+    text-decoration: none;
+    float: left;
+    color: white;
+    font-size: 27px;
+    line-height: 70px;
+    font-weight: 600;
+    padding-left: 60px; 
+}
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+nav ul li{
+    float: left;
+    display: inline-block;
+    background: #da9d49;
+    margin: 0 5px;
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+nav ul li a:hover{
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #a0691d,
+                0 0 5px #b41242;
+}
+nav ul ul li a:hover{
+    color: rgba(255, 0, 13, 0.658);
+    box-shadow: none;
+}
+nav ul ul{
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid #ddb532;
+}
+nav ul ul li a{
+    line-height: 50px;
+}
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+/*slider image*/
+.container {
+    position: relative;
+}
+.slide-1 {
+    background: url('images/banner2.jpeg');
+}
+.slide-2 {
+    background: url('images/banner3.jpeg');
+}
+.slide-3 {
+    background: url('images/banner1.jpg');
+}
+
+.slide {
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    transform: background 500ms;
+}
+.arrow img {
+    width: 50px;
+}
+.arrow:hover {
+    background: rgba(0, 0, 0, .4);
+}
+.l {
+    left: 0;
+}
+.r {
+    right: 0;
+}
+
+/*content*/
+.content-part{
+  position: relative;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ flex-wrap: wrap;
+ flex-direction: row;
+ width: 100%;
+ height:400px;
+}
+.text-part{
+ width: 65%;
+ height: 80%;
+} 
+.text-part h1{
+color: #ce911f;
+}
+
+/*bestseller*/
+table{
+  width: 70%;
+  align-items: center;
+  text-align: center;
+  margin-left: 50%;
+  margin-top: -30%;
+}
+table img{
+  width: 100%;
+  height: auto;
+  align-items: center;
+  border-radius: 4%;
+}
+
+
+/*newsletter*/
+.newsletter {
+    width: 98%;
+    background: linear-gradient(125deg, #faed77, #d46318);
+    padding: 60px;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    align-items: center;
+}
+
+.newsletter h2.title {
+    color: #FFF;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.newsletter p {
+    color: #FFF;
+    font-size: .9rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.newsletter form .inputBox {
+    width: 350px;
+    height: 70px;
+    background: #574b9060;
+    border-radius: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.newsletter form .inputBox input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 50px);
+    height: 100%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+.newsletter form .inputBox input::placeholder {
+    color: #f1f1f1;
+}
+
+.newsletter form .inputBox button.btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: #daa371;
+    color: #FFF;
+    cursor: pointer;
+    animation: animate 3s infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 0 5px #574b9060,
+                    0 0 0 10px #574b9030;
+    }
+}
+
+.newsletter form .inputBox button.btn:hover {
+    animation: none;
+}
+
+
+/*FOOTER*/
+footer{
+ position:absolute;
+ left:0;
+ right:0;
+ background: hsl(22, 73%, 49%);
+ height: 240px;
+ width:auto;
+ color:#fff;
+}
+.footer-content{
+ display: flex;
+ align-item: center;
+ justify-content: center;
+ flex-direction: column;
+ text-align: center;
+ padding-top: 20px;
+ padding-bottom: 5px;
+}
+.footer-content{
+ font-size: 1.8rem;
+ font-weight: 400;
+ text-transform: capitalize;
+ line-height: 3rem;
+}
+.footer-content p{
+ max-width:500px;
+ margin: 1px auto;
+ line-height: 28px;
+ font-size: 14px;
+}
+.social-menu{
+ text-align:left;
+}
+.social-menu h1 {
+ text-align: center;
+ text-height: 30px;
+}
+.social-menu ul {
+ position: absolute;
+ top: 75%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ padding: 0;
+ margin: 0;
+ display: flex;
+}
+.social-menu ul li {
+ list-style: none;
+ margin: 0 10px;
+}
+.social-menu ul li .fa {
+ color: #000000;
+ font-size: 25px;
+ line-height: 50px;
+ transition: .5s;
+}
+.social-menu ul li .fa:hover {
+ color: #ffffff;
+}
+.social-menu ul li a {
+ position: relative;
+ display: block;
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ background-color: white;
+ text-align: center;
+ transition: 0.5s;
+ transform: translate(0,0px);
+ box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+ transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+ background-color: #55acee;
+}
+.social-menu ul li:nth-child(2) a:hover {
+ background-color: #e4405f;
+}
+
+.footer-bottom{
+ background: #7c3e05;
+ width:100%;
+margin-top:45px;
+ height: 35px;
+ padding: 20px -3;
+ font-family: "Open-sans";
+ text-align: center;
+}
+.footer-bottom p{
+ text-align:center;
+ font-size: 14px;
+ word-spacing: 2px;
+ text-transform: capitalize;
+}
+.footer-bottom span{
+ text-transform: uppercase;
+ opacity: .4;
+ font-weight: 200;
+}
